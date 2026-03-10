@@ -253,66 +253,80 @@ class _JozzList extends StatelessWidget {
           borderRadius:
               BorderRadius.circular((style.listItemRadius ?? 8).toDouble()),
         ),
-        child: ExpansionTile(
-          initiallyExpanded: currentJozzIndex == jozzIndex,
-          collapsedShape: RoundedRectangleBorder(
-            borderRadius:
-                BorderRadius.circular((style.listItemRadius ?? 8).toDouble()),
-            side: BorderSide(
-              color: textColor.withValues(alpha: 0.1),
-              width: 1,
-            ),
-          ),
-          shape: RoundedRectangleBorder(
-            borderRadius:
-                BorderRadius.circular((style.listItemRadius ?? 8).toDouble()),
-            side: BorderSide(
-              color: textColor.withValues(alpha: 0.1),
-              width: 1,
-            ),
-          ),
+        child: ListTile(
+          onTap: () {
+            Navigator.pop(context);
+            QuranLibrary().jumpToJoz(jozzIndex + 1);
+          },
           title: Text(
-            jozzList[jozzIndex],
+            // jozzList[jozzIndex],
+            'Juz ${jozzIndex + 1}',
             style: QuranLibrary().cairoStyle.copyWith(
                   fontWeight: FontWeight.w600,
                   color: textColor,
                 ),
           ),
-          children: List.generate(2, (index) {
-            final hizbIndex =
-                (index == 0 && jozzIndex == 0) ? 0 : ((jozzIndex * 2 + index));
-            return Material(
-              color: Colors.transparent,
-              child: InkWell(
-                borderRadius: BorderRadius.circular(4),
-                onTap: () {
-                  Navigator.pop(context);
-                  QuranLibrary().jumpToHizb(hizbIndex + 1);
-                },
-                child: Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 8.0, horizontal: 16.0),
-                  margin: const EdgeInsets.symmetric(
-                      horizontal: 16.0, vertical: 2.0),
-                  decoration: BoxDecoration(
-                    color: index.isEven
-                        ? accentColor.withValues(
-                            alpha: (style.hizbItemAltBgAlpha ?? 0.05))
-                        : Colors.transparent,
-                    borderRadius: BorderRadius.circular(4),
-                  ),
-                  child: Text(
-                    hizbList[hizbIndex],
-                    style: QuranLibrary().cairoStyle.copyWith(
-                          color: textColor,
-                        ),
-                  ),
-                ),
-              ),
-            );
-          }),
         ),
+        // child: ExpansionTile(
+        //   initiallyExpanded: currentJozzIndex == jozzIndex,
+        //   collapsedShape: RoundedRectangleBorder(
+        //     borderRadius:
+        //         BorderRadius.circular((style.listItemRadius ?? 8).toDouble()),
+        //     side: BorderSide(
+        //       color: textColor.withValues(alpha: 0.1),
+        //       width: 1,
+        //     ),
+        //   ),
+        //   shape: RoundedRectangleBorder(
+        //     borderRadius:
+        //         BorderRadius.circular((style.listItemRadius ?? 8).toDouble()),
+        //     side: BorderSide(
+        //       color: textColor.withValues(alpha: 0.1),
+        //       width: 1,
+        //     ),
+        //   ),
+        //   title: Text(
+        //     jozzList[jozzIndex],
+        //     style: QuranLibrary().cairoStyle.copyWith(
+        //           fontWeight: FontWeight.w600,
+        //           color: textColor,
+        //         ),
+        //   ),
+        //   children: List.generate(2, (index) {
+        //     final hizbIndex =
+        //         (index == 0 && jozzIndex == 0) ? 0 : ((jozzIndex * 2 + index));
+        //     return Material(
+        //       color: Colors.transparent,
+        //       child: InkWell(
+        //         borderRadius: BorderRadius.circular(4),
+        //         onTap: () {
+        //           Navigator.pop(context);
+        //           QuranLibrary().jumpToHizb(hizbIndex + 1);
+        //         },
+        //         child: Container(
+        //           width: double.infinity,
+        //           padding: const EdgeInsets.symmetric(
+        //               vertical: 8.0, horizontal: 16.0),
+        //           margin: const EdgeInsets.symmetric(
+        //               horizontal: 16.0, vertical: 2.0),
+        //           decoration: BoxDecoration(
+        //             color: index.isEven
+        //                 ? accentColor.withValues(
+        //                     alpha: (style.hizbItemAltBgAlpha ?? 0.05))
+        //                 : Colors.transparent,
+        //             borderRadius: BorderRadius.circular(4),
+        //           ),
+        //           child: Text(
+        //             hizbList[hizbIndex],
+        //             style: QuranLibrary().cairoStyle.copyWith(
+        //                   color: textColor,
+        //                 ),
+        //           ),
+        //         ),
+        //       ),
+        //     );
+        //   }),
+        // ),
       ),
     );
   }

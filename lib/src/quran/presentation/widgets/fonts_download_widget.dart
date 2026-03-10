@@ -418,6 +418,7 @@ class _FontsRecitationTile extends StatelessWidget {
       return style!.downloadedFontsText!;
     }
 
-    return recitation.arabicName;
+    // return recitation.arabicName;
+    return recitation.indonesiaName;
   }
 }

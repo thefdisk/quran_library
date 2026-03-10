@@ -61,6 +61,7 @@ enum QuranRecitation {
     englishName: 'Hafs Mushaf',
     fontFamily: 'p',
     dataSource: DataSource.local('bundled'),
+    indonesiaName: 'Mushaf Hafs',
   );
 
   /// ورش - خط المصحف
@@ -80,6 +81,7 @@ enum QuranRecitation {
     required this.englishName,
     required this.fontFamily,
     required this.dataSource,
+    this.indonesiaName = '',
   });
 
   /// Index for compatibility with existing font selection system
@@ -96,6 +98,9 @@ enum QuranRecitation {
 
   /// Data source configuration
   final DataSource dataSource;
+
+  /// Indonesia display name
+  final String indonesiaName;
 
   /// Get recitation by index
   static QuranRecitation fromIndex(int idx) {

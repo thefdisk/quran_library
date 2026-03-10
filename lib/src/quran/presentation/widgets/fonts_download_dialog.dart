@@ -43,8 +43,9 @@ class FontsDownloadDialog extends StatelessWidget {
             SvgPicture.asset(
                 defaults.optionsIconPath ?? AssetsPath.assets.options,
                 height: defaults.iconSize,
-                colorFilter: ColorFilter.mode(
-                    defaults.iconColor ?? Theme.of(context).colorScheme.primary,
+                colorFilter: const ColorFilter.mode(
+                    // defaults.iconColor ?? Theme.of(context).colorScheme.primary,
+                    Color(0xFF1B3F7D),
                     BlendMode.srcIn)),
       ),
     );

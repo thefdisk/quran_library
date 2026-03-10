@@ -298,7 +298,7 @@ class AyahMenuDialog extends StatelessWidget {
                                   BookmarksCtrl.instance.saveBookmark(
                                     surahName: QuranCtrl.instance
                                         .getSurahDataByAyah(ayah!)
-                                        .arabicName,
+                                        .englishName,
                                     ayahNumber: ayah!.ayahNumber,
                                     ayahId: ayah!.ayahUQNumber,
                                     page: ayah!.page,

@@ -66,7 +66,7 @@ class _BookmarksTab extends StatelessWidget {
                         color: effectiveStyle.textColor!),
                   ),
                   subtitle: Text(
-                    'عدد: ${bookmarks.length}'.convertNumbersAccordingToLang(
+                    'Nomor: ${bookmarks.length}'.convertNumbersAccordingToLang(
                         languageCode: languageCode),
                     style: QuranLibrary().cairoStyle.copyWith(
                         color: effectiveStyle.subtitleTextColor!,
@@ -177,7 +177,7 @@ class _BookmarksTab extends StatelessWidget {
                                           _chip(
                                             context,
                                             effectiveStyle,
-                                            'آية ${bookmark.ayahNumber}'
+                                            'Ayat ${bookmark.ayahNumber}'
                                                 .convertNumbersAccordingToLang(
                                                     languageCode: languageCode),
                                             groupColor.withValues(alpha: 0.12),
@@ -187,7 +187,7 @@ class _BookmarksTab extends StatelessWidget {
                                             _chip(
                                               context,
                                               effectiveStyle,
-                                              'صفحة ${bookmark.page}'
+                                              'Halaman ${bookmark.page}'
                                                   .convertNumbersAccordingToLang(
                                                       languageCode:
                                                           languageCode),

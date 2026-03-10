@@ -231,7 +231,7 @@ class _SearchTabState extends State<_SearchTab> {
                       subtitle: Row(
                         children: [
                           Text(
-                            ayah.arabicName ?? '',
+                            ayah.englishName ?? '',
                             style: TextStyle(
                                 color: textColor.withValues(
                                     alpha: s.subtitleTextAlpha ?? 0.8)),
