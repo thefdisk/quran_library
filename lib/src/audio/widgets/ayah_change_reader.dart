@@ -58,7 +58,7 @@ class AyahChangeReader extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(16.0),
           child: HeaderDialogWidget(
-            title: effectiveStyle.dialogHeaderTitle ?? 'تغيير القارئ',
+            title: 'Ubah pembaca',
             isDark: dark,
             titleColor: effectiveStyle.dialogHeaderTitleColor,
             backgroundGradient: effectiveStyle.dialogHeaderBackgroundGradient,
@@ -84,11 +84,11 @@ class AyahChangeReader extends StatelessWidget {
                     unselectedLabelColor:
                         effectiveStyle.tabUnselectedLabelColor!,
                     labelStyle: effectiveStyle.tabLabelStyle!,
-                    tabs: [
-                      Tab(text: effectiveStyle.readersTabText!),
-                      if (!kIsWeb)
-                        Tab(text: effectiveStyle.downloadedSurahsTabText!),
+                    tabs: const [
+                      Tab(text: 'Pembaca'),
+                      if (!kIsWeb) Tab(text: 'Surah yang telah diunduh'),
                     ],
+                    isScrollable: true,
                   ),
                 ),
                 Expanded(

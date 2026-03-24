@@ -56,7 +56,7 @@ class ShowTafseer extends StatelessWidget {
         return Directionality(
           textDirection: TextDirection.rtl,
           child: DefaultTabController(
-            length: 2,
+            length: 1,
             child: Container(
               height: sheetHeight,
               width: sheetWidth,
@@ -110,8 +110,8 @@ class ShowTafseer extends StatelessWidget {
                           color: AppColors.getTextColor(isDark),
                         ),
                     tabs: const [
-                      Tab(text: 'التفسير'),
-                      Tab(text: 'أحكام التجويد'),
+                      Tab(text: 'Tafsir'),
+                      // Tab(text: 'أحكام التجويد'),
                     ],
                   ),
                   const Divider(height: 1),
@@ -166,14 +166,14 @@ class ShowTafseer extends StatelessWidget {
                             ),
                           ],
                         ),
-                        _TajweedAyaTab(
-                          ayahUQNumber: ayahUQNumber,
-                          ayahNumber: ayahNumber,
-                          quranCtrl: quranCtrl,
-                          tajweedCtrl: tajweedCtrl,
-                          isDark: isDark,
-                          tafsirStyle: s,
-                        ),
+                        // _TajweedAyaTab(
+                        //   ayahUQNumber: ayahUQNumber,
+                        //   ayahNumber: ayahNumber,
+                        //   quranCtrl: quranCtrl,
+                        //   tajweedCtrl: tajweedCtrl,
+                        //   isDark: isDark,
+                        //   tafsirStyle: s,
+                        // ),
                       ],
                     ),
                   ),
